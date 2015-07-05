@@ -1,6 +1,11 @@
-#pragma once
+#ifndef __CallableMod_h__
+#define __CallableMod_h__
+
+
+
 #include <deque>
 #include <functional>
+#include <iostream>
 
 
 template<typename TRET, typename ...TARGS>
@@ -104,4 +109,13 @@ class CallableMod : public CallableMod<TRET, void>
     funname(std::bind(&classname::_##funname, this))
 
 
+void test_cm ( void )
+{
+    // auto pTest = new Test();
+    std::cout << std::is_same<void, void>().value << std::endl;
+    std::cout << std::is_same<int, void>().value << std::endl;
+    std::cout << std::is_same<int, int>().value << std::endl;
+    //pTest->say ( "hello world!\n" );
+}
 
+#endif // __CallableMod_h__

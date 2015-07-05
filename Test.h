@@ -1,4 +1,7 @@
-#pragma once
+#ifndef __Test_h__
+#define __Test_h__
+
+
 /*#include "CallableMod.h"*/
 #include <string>
 
@@ -23,3 +26,6 @@ class Test
 
 };
 
+
+
+#endif // __Test_h__
